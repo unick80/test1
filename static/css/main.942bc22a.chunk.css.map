@@ -1,1 +1,0 @@
-{"version":3,"sources":["Rabbit.css"],"names":[],"mappings":"AAAA,gBACI,aAAc,CACd,UAAW,CACX,eAAgB,CAChB,gBACF","file":"main.942bc22a.chunk.css","sourcesContent":[".Rabbit {\r\n    display: block;\r\n    width: 100%;\r\n    max-width: 400px;\r\n    margin: 20px auto;\r\n  }\r\n  "]}
