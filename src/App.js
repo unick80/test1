@@ -37,9 +37,9 @@ const App = () => {
 	};
 
 		QRCode.toDataURL(global.qrcode,  {
-		width: 320,
-		height: 320,
-		margin: 0
+		width: 250,
+		height: 250,
+		margin: 1
 	}, function (err, url) {
 		global.src = url;
 	});

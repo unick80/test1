@@ -1,0 +1,9 @@
+.qrcode{
+    text-align: center;
+}
+
+.qrcode_p{
+    font-size: 5vw;
+    font-weight: bold;
+    margin: 0;
+}
