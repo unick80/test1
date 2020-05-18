@@ -4,13 +4,13 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
+//import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+//import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, go, fetchedUser, src, qrcode}) => (
 	<Panel id={id}>
-		<PanelHeader>Живность</PanelHeader>
+		<PanelHeader>Код скидки</PanelHeader>
 		{//fetchedUser &&
 		//<Group title="User Data Fetched with VK Bridge">
 		//	<Cell
@@ -22,16 +22,12 @@ const Home = ({ id, go, fetchedUser }) => (
 		//</Group>
 		}
 
-		<Group title="Список живности">
+		<Group title="Код скидки">
 			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Покажи котяру
-				</Button>
-			</Div>
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="rabbit">
-					Покажи кроля
-				</Button>
+				<center>
+					<img src={src} alt="QRcode"/>
+					<p><h1>{qrcode}</h1></p>
+				</center>
 			</Div>
 		</Group>
 	</Panel>
@@ -39,6 +35,8 @@ const Home = ({ id, go, fetchedUser }) => (
 
 Home.propTypes = {
 	id: PropTypes.string.isRequired,
+	src: PropTypes.string.isRequired,
+	qrcode: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
 		photo_200: PropTypes.string,
